@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Painel da Adega</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-gray-800 antialiased">
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 main-container">
+
+        <div class="bg-white/40 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl w-full max-w-sm p-6 sm:p-8">
+
+            <header class="text-center mb-8">
+                <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Acessar Painel</h1>
+                <p class="text-md text-gray-700"><b>Digite suas credenciais</b></p>
+            </header>
+
+            <form id="login-form" class="space-y-6">
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700"><b>Usuário</b></label>
+                    <input id="username" name="username" type="text" placeholder="admin" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700"><b>Senha</b></label>
+                    <input id="password" name="password" type="password" placeholder="••••••••" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div id="login-message" class="text-red-600 text-sm text-center font-medium"></div>
+
+                <button type="submit"
+                    class="w-full py-2 px-4 rounded-md font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Entrar
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

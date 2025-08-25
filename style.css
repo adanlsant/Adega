@@ -1,0 +1,69 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-image: url('./mercado.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    z-index: 1000;
+    animation: fadein .5s, fadeout .5s 2.5s;
+    background: transparent;
+}
+
+.message-box.error { background: #fee2e2; color: #b91c1c; }
+.message-box.success { background: #d1fae5; color: #047857; }
+
+@keyframes fadein { 
+    from { opacity: 0 } 
+    to { opacity: 1 } 
+}
+
+@keyframes fadeout { 
+    from { opacity: 1 } 
+    to { opacity: 0 } 
+}
+
+#add-to-cart-fixed {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 200px;
+  padding: 0.5rem;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  z-index: 500;
+  /* --- EFEITO ADICIONADO AQUI --- */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+#add-to-cart-fixed:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 15px rgba(0,0,0,.15);
+}
+
+
+/* Estilos para impressão */
+@media print {
+    body > *, #add-to-cart-fixed, .main-container {
+        display: none;
+    }
+    body {
+        background-image: none;
+    }
+    #printable-content {
+        display: block !important;
+    }
+}
